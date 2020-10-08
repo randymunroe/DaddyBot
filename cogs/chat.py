@@ -74,7 +74,7 @@ class ChatCog(commands.Cog, name="Chat Commands"):
                     exp -= lvlexp
                     users[user_id]['level'] = lvl
                     users[user_id]['xp'] = exp
-                    await channel.send('\N{POOP}  Level up! ' + author.mention + ' is now level ' + str(lvl) + '! \N{POOP}') #
+                    await channel.send('\N{PILE OF POO}  Level up! ' + author.mention + ' is now level ' + str(lvl) + '! \N{PILE OF POO}') #
                 with open('users.json', 'w') as fp:
                     print('Add XP Success')
                     json.dump(users, fp, indent=4)
@@ -115,7 +115,7 @@ class ChatCog(commands.Cog, name="Chat Commands"):
                         count+=1
                 if count > 0:
                     xp = count * random.randint(2,4)
-                    await message.add_reaction('\N{POOP}')
+                    await message.add_reaction('\N{PILE OF POO}')
                     await self.user_add_xp(str(message.author.id), xp, message.channel, message.author)
         
 #-----------------------------------------Random Interactions-----------------------------------#  
