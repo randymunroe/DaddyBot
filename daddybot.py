@@ -19,9 +19,9 @@ def get_prefix(bot, message):
     # If we are in a guild, we allow for the user to mention us or use any of the prefixes in our list.
     return commands.when_mentioned_or(*prefixes)(bot, message)
 
-bot = commands.Bot(command_prefix=get_prefix, description='A Very Terrible Bot')
+bot = commands.Bot(command_prefix=get_prefix, description='A fun bot!')
 
-initial_extensions = ['cogs.admin', 'cogs.owner', 'cogs.chat', 'cogs.general', 'cogs.uasoup']
+initial_extensions = ['cogs.admin', 'cogs.owner', 'cogs.chat', 'cogs.general']
 
 # Here we load our extensions(cogs) listed above in [initial_extensions].
 if __name__ == '__main__':
@@ -39,7 +39,7 @@ async def on_ready():
     print(f'\n\nLogged in as: {bot.user.name} - {bot.user.id}\nVersion: {discord.__version__}\n')
 
     # Changes our bots Playing Status. type=1(streaming) for a standard game you could remove type and url.
-    await bot.change_presence(activity=discord.Game(name='Chicken Stuff | >?!help'))
+    await bot.change_presence(activity=discord.Game(name='Minecraft | >?!help'))
     print(f'Successfully logged in and booted...!')
 
 def read_token():
